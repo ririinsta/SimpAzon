@@ -1,3 +1,5 @@
+var items = [document.getElementById("imq1")]
+
 function openproduct(index){
     if (document.cookie == "hardcoded"){
 
