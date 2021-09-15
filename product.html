@@ -4,7 +4,7 @@
         <link href="css/product.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&family=Urbanist&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300&family=Poppins:wght@500&family=Roboto:wght@300;500&family=Urbanist&family=Rubik&display=swap" rel="stylesheet">
         <script src="js/product.js"></script>
         <title id="title">SimpAzon | Item Name</title>
     </head>
@@ -18,17 +18,17 @@
             </div>
         </div>
         <div class="info">
-            <img id="productpicture" src="">
-            <h2 id="productname"></h2>
-            <p id="discription"></p>
+            <img class="productpicture" id="productpicture" src="img/1.png">
+            <h2 class="productname" id="productname">Test Item</h2>
+            <p class="description" id="discription">This is a Test Item</p>
         </div>
         <div class="buy">
             <h3 id="productprice" class="purchaseprice">C$</h3>
-            <a class="purchase" href="#">Purchase</a>
+            <a class="purchase" href="javascript:void(0);">Purchase</a>
             <br>
             <br>
             <br>
-            <a class="addtocart" src="#">Add To Cart</a>
+            <a class="addtocart" onclick="alert(getUrlVars()['pid']);" href="javascript:void(0);">Add To Cart</a>
         </div>
     </body>
 </html>

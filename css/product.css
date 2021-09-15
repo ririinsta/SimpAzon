@@ -26,7 +26,23 @@ a.p{
 }
 div.buy {
     float: right;
+    margin-top: 15px;
+    margin-right: 25px;
 }
 div.info {
     float: left;
+    margin: 10px;
+}
+h2.productname{
+    font-family: 'Rubik', sans-serif;
+}
+p.description{
+    font-family: 'Mulish@300', sans-serif;
+}
+h3.purchaseprice{
+    font-family: "Poppins@500", sans-serif;
+}
+img.productpicture{
+    width: 250px;
+    height: 250px;
 }

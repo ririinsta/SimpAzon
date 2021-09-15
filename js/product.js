@@ -2,7 +2,7 @@ var items = [document.getElementById("imq1"), document.getElementById("imq2"), d
 
 function openproduct(index){
     alert(getCookie("hardcoded"));
-    document.location = getCookie("hardcoded") + "?pid" + index;
+    document.location = getCookie("hardcoded") + "?pid=" + index;
 }
 function getUrlVars() {
     var vars = {};
