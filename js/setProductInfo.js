@@ -15,4 +15,10 @@ windows.onLoad() = function (){
 function setProduct(){
     var name = document.getElementById("productname");
     var image = document.getElementById("productpicture");
+    var description = document.getElementById("discription");
+    var price = document.getElementById("productprice");
+
+    name.textContent = itemns[itemIndex];
+    image.src = itemis[itemIndex];
+    price.textContent = itemps[itemIndex];
 }
