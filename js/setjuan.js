@@ -52,7 +52,7 @@ function load(){
         if (itemps[index] == 0){
             element.style = "display: none;";
         } else {
-            element.textContent = "x" + itemps[index];
+            element.textContent = "C$" + itemps[index];
         }
         index++;
     });

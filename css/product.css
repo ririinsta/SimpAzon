@@ -24,3 +24,9 @@ a.p{
     background-color: #ddd;
     color: black;
 }
+div.buy {
+    float: right;
+}
+div.info {
+    float: left;
+}
