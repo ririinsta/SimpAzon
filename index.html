@@ -12,9 +12,12 @@
         <div class="header">
             <a href="#" class="logo">SimpAzon</a>
             <div class="header-right">
-                <a class="active" class="" href="#">Home</a>
-                <a class="headeritem" href="#">My Orders</a>
-                <a class="headeritem" href="#">About</a>
+                <div class="header-right">
+                    <a class="headeritem" href="index.html"><center><span class="material-icons">&#xE88A;</span></center></a>
+                    <a class="headeritem" id="orders" href="#"><center><span class="material-icons">&#xE158;</span></center></a>
+                    <a class="headeritem" id="account" onclick="checkLogin();" href="javascript:void(0);"><center><span class="material-icons">&#xE87C;</span></center></a>
+                    <a class="headeritem" id="debug" onclick="openDebug();" href="javascript:void(0);"><center><span class="material-icons">&#xEF3D;</span></center></a>
+                </div>
             </div>
         </div>
         <div class="items">

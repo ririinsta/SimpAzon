@@ -36,11 +36,17 @@ div.info {
 h2.productname{
     font-family: 'Rubik', sans-serif;
 }
+span.productname{
+    font-family: 'Rubik', sans-serif;
+}
 p.description{
     font-family: 'Mulish@300', sans-serif;
 }
 h3.purchaseprice{
     font-family: "Poppins@500", sans-serif;
+}
+#productindacator{
+    margin-left: 10px;
 }
 img.productpicture{
     width: 250px;

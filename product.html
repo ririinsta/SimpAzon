@@ -13,28 +13,29 @@
     </head>
     <body>
         <div class="header">
-            <a href="#" class="logo">SimpAzon</a>
+            <a href="index.html" class="logo">SimpAzon</a>
             <div class="header-right">
                 <a class="headeritem" class="" href="index.html"><center><span class="material-icons">&#xE88A;</span></center></a>
                 <a class="headeritem" id="orders" href="#"><center><span class="material-icons">&#xE158;</span></center></a>
                 <a class="headeritem" id="account" onclick="checkLogin();" href="javascript:void(0);"><center><span class="material-icons">&#xE87C;</span></center></a>
+                <a class="headeritem" id="debug" onclick="openDebug();" href="javascript:void(0);"><center><span class="material-icons">&#xEF3D;</span></center></a>
             </div>
         </div>
         <div class="info">
             <img class="productpicture" id="productpicture" src="img/1.png">
-            <h2 class="productname" id="productname">Test Item</h2>
+            <h2><span class="productname" id="productname">Test Item</span><span id="productindacator" class="material-icons">&#xE1D1;</span></h2> 
             <p class="description" id="discription">This is a Test Item</p>
         </div>
         <div class="buy">
             <h3 id="productprice" class="purchaseprice">C$</h3>
             <a class="purchase" onclick="modelOpen();" href="javascript:void(0);">
-                <span id="buytext" class="material-icons">Purchase</span>
+                <span id="buytext">Purchase</span>
             </a>
             <br>
             <br>
             <br>
             <a class="addtocart" href="javascript:void(0);">
-                <span id="carttext" class="material-icons">Add To Cart</span>
+                <span id="carttext">Add To Cart</span>
             </a>
         </div>
         <div id="purchasemodal" class="purchasemodal">
