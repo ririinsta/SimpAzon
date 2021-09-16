@@ -7,7 +7,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300&family=Poppins:wght@500&family=Roboto:wght@300;500&family=Urbanist&family=Rubik&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="css/modal.css" rel="stylesheet">
-        <script src="js/product.js"></script>
+        
         <!-- <script src="js/setProductInfo.js"></script> -->
         <title id="title">SimpAzon | Item Name</title>
     </head>
@@ -16,7 +16,7 @@
             <a href="#" class="logo">SimpAzon</a>
             <div class="header-right">
                 <a class="headeritem" class="" href="index.html"><center><span class="material-icons">&#xE88A;</span></center></a>
-                <a class="headeritem" href="#"><center><span class="material-icons">&#xE158;</span></center></a>
+                <a class="headeritem" id="orders" href="#"><center><span class="material-icons">&#xE158;</span></center></a>
                 <a class="headeritem" href="#"><center><span class="material-icons">&#xE87C;</span></center></a>
             </div>
         </div>
@@ -33,13 +33,25 @@
             <br>
             <a class="addtocart" href="javascript:void(0);">Add To Cart</a>
         </div>
-        <div id="myModal" class="modal">
+        <div id="purchasemodal" class="purchasemodal">
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <h2>Purchase</h2>
             </div>
         </div>
+        <div id="loginmodal" class="loginmodal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form action="POST">
+                    <input type="number" name="usercid" id="citizenid">
+                    <br>
+                    <input type="password" name="userid" id="usernumber">
+                    <input type="submit" value="submit">
+                </form>
+            </div>
+        </div>
     </body>
+    <script src="js/product.js"></script>
     <script src="js/setProductInfo.js"></script>
     <script src="js/modal.js"></script>
 </html>

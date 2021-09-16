@@ -1,5 +1,5 @@
 // Get the modal
-var modal;
+var pmodal;
 
 // Get the <span> element that closes the modal
 var span;
@@ -7,20 +7,20 @@ var span;
 document.onload = open();
 function open(){
     span = document.getElementsByClassName("close")[0];
-    modal = document.getElementById("myModal");
+    pmodal = document.getElementById("purchasemodal");
 }
 function modelOpen(){
-    modal.style.display = "block";
+    pmodal.style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
-  modal.style.display = "none";
+    pmodal.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+    if (event.target == pmodal) {
+        pmodal.style.display = "none";
+    }
 } 
