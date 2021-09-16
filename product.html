@@ -18,7 +18,7 @@
                 <a class="headeritem" class="" href="index.html"><center><span class="material-icons">&#xE88A;</span></center></a>
                 <a class="headeritem" id="orders" href="#"><center><span class="material-icons">&#xE158;</span></center></a>
                 <a class="headeritem" id="account" onclick="checkLogin();" href="javascript:void(0);"><center><span class="material-icons">&#xE87C;</span></center></a>
-                <a class="headeritem" id="debug" onclick="openDebug();" href="javascript:void(0);"><center><span class="material-icons">&#xEF3D;</span></center></a>
+                <a class="headeritem" id="debug" onclick="dmodelopen();" href="javascript:void(0);"><center><span class="material-icons">&#xEF3D;</span></center></a>
             </div>
         </div>
         <div class="info">
@@ -54,6 +54,13 @@
                     <br>
                     <input type="button" value="Login" onclick="login();">
                 </form>
+            </div>
+        </div>
+        <div id="debugmodal" class="debugmodal">
+            <div class="modal-content" style="">
+                <span id="dclose" class="material-icons" style="float: right;">&#xE5CD;</span>
+                <input type="number" id="amount">
+                <button onclick="setQuantity();">Set Current Item Quantity</button>
             </div>
         </div>
     </body>
