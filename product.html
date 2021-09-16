@@ -9,7 +9,6 @@
         <link href="css/modal.css" rel="stylesheet">
         <script src="js/product.js"></script>
         <!-- <script src="js/setProductInfo.js"></script> -->
-        <script src="js/modal.js"></script>
         <title id="title">SimpAzon | Item Name</title>
     </head>
     <body>
@@ -28,20 +27,19 @@
         </div>
         <div class="buy">
             <h3 id="productprice" class="purchaseprice">C$</h3>
-            <a class="purchase" href="javascript:void(0);">Purchase</a>
+            <a class="purchase" onclick="modelOpen();" href="javascript:void(0);">Purchase</a>
             <br>
             <br>
             <br>
-            <a class="addtocart" onclick="alert(getUrlVars()['pid']);" href="javascript:void(0);">Add To Cart</a>
+            <a class="addtocart" href="javascript:void(0);">Add To Cart</a>
         </div>
-        <!-- The Modal -->
         <div id="myModal" class="modal">
-            <!-- Modal content -->
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <p>Some text in the Modal..</p>
+                <h2>Purchase</h2>
             </div>
         </div>
     </body>
     <script src="js/setProductInfo.js"></script>
+    <script src="js/modal.js"></script>
 </html>
