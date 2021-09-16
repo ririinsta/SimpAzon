@@ -1,24 +1,26 @@
-// Get the modal
 var pmodal;
-
-// Get the <span> element that closes the modal
+var lmodal;
 var span;
-
+var spanl;
 document.onload = open();
 function open(){
     span = document.getElementsByClassName("close")[0];
+    spanl = document.getElementById("close");
     pmodal = document.getElementById("purchasemodal");
+    lmodal = document.getElementById("loginmodal");
 }
-function modelOpen(){
+function pmodelOpen(){
     pmodal.style.display = "block";
 }
-
-// When the user clicks on <span> (x), close the modal
+function lmodelOpen(){
+    lmodal.style.display = "block";
+}
 span.onclick = function() {
     pmodal.style.display = "none";
 }
-
-// When the user clicks anywhere outside of the modal, close it
+spanl.onclick = function() {
+    lmodal.style.display = "none";
+}
 window.onclick = function(event) {
     if (event.target == pmodal) {
         pmodal.style.display = "none";

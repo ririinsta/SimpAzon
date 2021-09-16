@@ -5,6 +5,10 @@ document.onload = onOpen();
 function onOpen(){
     if(getCookie("userid") == ""){
         document.getElementById("orders").style.display = "none";
+        if (document.location == document.location.host + "product.html"){
+            document.getElementById("carttext").textContent = '&#xE033;'
+            document.getElementById("buytext").textContent = '&#xE033;'
+        }
     } else {
         document.getElementById("orders").style.display = "";
     }
@@ -19,9 +23,6 @@ function getUrlVars() {
         vars[key] = value;
     });
     return vars;
-}
-function login(username, password){
-    setCookie("username", username+password, 1);
 }
 function getCookie(cname) {
     let name = cname + "=";
