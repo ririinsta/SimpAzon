@@ -9,6 +9,7 @@ function setProduct(){
     itemis = ["img/1.png", "", "", "", "", ""];
     itemqs = [10, , 0, 0, 0, 0];
     itemns = ["Wood (Long Distance Only)", "", "", "", "", ""];
+    itemds = ["Wood", "", "", "", "", ""]
     itemps = [3, 0, 0, 0, 0, 0];
     itemst = [10, 0, 0, 0, 0, 0];
     var name = document.getElementById("productname");
@@ -23,6 +24,7 @@ function setProduct(){
     name.textContent = itemns[itemIndex];
     image.src = itemis[itemIndex];
     price.textContent = "C$" + itemps[itemIndex];
+    description.textContent = itemds[itemIndex];
     if (itemst[itemIndex] <= 10){
 
     } else {
@@ -31,7 +33,7 @@ function setProduct(){
 }
 function setQuantity(){
     var amount = document.getElementById("amount").value;
-    itemst[itemIndex] = amount;
+    itemst[itemIndex] = amount; 
     if (itemst[itemIndex] <= 10){
 
     } else {
