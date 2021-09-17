@@ -3,6 +3,7 @@ var lmodal;
 var dmodal;
 var span;
 var spanl;
+var spand;
 document.onload = open();
 function open(){
     span = document.getElementsByClassName("close")[0];
@@ -28,7 +29,7 @@ spanl.onclick = function() {
     lmodal.style.display = "none";
 }
 spand.onclick = function() {
-    lmodal.style.display = "none";
+    dmodal.style.display = "none";
 }
 window.onclick = function(event) {
     if (event.target == pmodal) {
