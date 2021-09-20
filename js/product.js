@@ -11,7 +11,7 @@ function setGithubLayout(){
 function getUserDetails(){
     if(getCookie("hardcoded") == "ririinsta.github.io/product.html"){
         var user = getCookie("userid");
-        var username = 
+        //var username =
     }
 }
 
