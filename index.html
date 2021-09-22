@@ -7,7 +7,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&family=Urbanist&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
     </head>
     <body>
         <div class="header">
@@ -95,6 +95,36 @@
                 <button onclick="setGithubLayout();">Set Github Layout</button>
             </div>
         </div>
+        <div id="loginmodal" class="loginmodal">
+            <div class="modal-content" style="width: 200px;">
+                <span id="close" class="material-icons" style="float: right;">&#xE5CD;</span>
+                <form>
+                    <input type="checkbox" name="debug" id="accountDebug">
+                    <br>
+                    <input type="text" name="accountCIDs" id="accountCIDs" placeholder="debug option">
+                    <br>
+                    <input type="text" name="accountUNDs" id="accountUNDs" placeholder="debug option">
+                </form>
+                <br>
+                <form>
+                    <input type="number" name="usercid" id="citizenid" placeholder="Citizen ID">
+                    <br>
+                    <input type="password" name="userid" id="usernumber" placeholder="Player ID">
+                    <br>
+                    <input type="button" value="Login" onclick="login();">
+                </form>
+            </div>
+        </div>
+        <div id="loginmodal" class="loginmodal">
+            <div class="modal-content" style="width: 200px;">
+                <span id="close" class="material-icons" style="float: right;">&#xE5CD;</span>
+                <p>Username: </p>
+                <p>Balance: </p>
+                <p>Orders: </p>
+            </div>
+        </div>
+        <script src="js/loginandshit.js"></script>
+        <script src="js/modal.js"></script>
         <script src="js/product.js"></script>
         <script src="js/setjuan.js"></script>
         <script src="js/homemodal.js"></script>
