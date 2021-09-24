@@ -1,7 +1,12 @@
 var cid = document.getElementById("citizenid"); //matches with cids
 var pid = document.getElementById("usernumber"); //match with cids
 function login(){
-    var fakeuser = {"AAAA": "Test"};
+    var fakeuser = {"AAAA": "Test"}; //Usernames
+    var fakeuser2 = {'AAAA': 1}; //CIDs
+    var fakeuser3 = {'AAAA': ['1']} //Orders
+    if (fakeuser2[pid.value].toString() == cid.value){
+        
+    }
 }
 function consoleLog(ccid, ccids){
     if (getCookie("localtesting") == "true"){
