@@ -5,7 +5,7 @@ function login(){
     var fakeuser2 = {'AAAA': 1}; //CIDs
     var fakeuser3 = {'AAAA': ['1']} //Orders
     if (fakeuser2[pid.value].toString() == cid.value){
-        
+        setCookie('userid', cid.value+pid.value, 1);
     }
 }
 function consoleLog(ccid, ccids){
