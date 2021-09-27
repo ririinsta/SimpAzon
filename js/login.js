@@ -1,26 +1,33 @@
 var cid = document.getElementById("citizenid"); //matches with cids
 var pid = document.getElementById("usernumber"); //match with cids
+var fakeuser = {"AAAA": "Test"}; //Usernames
+var fakeuser2 = {'AAAA': 1}; //CIDs
+var fakeuser3 = {'AAAA': ['1']};
 function login(){
     var fakeuser = {"AAAA": "Test"}; //Usernames
     var fakeuser2 = {'AAAA': 1}; //CIDs
     var fakeuser3 = {'AAAA': ['1']} //Orders
     if (fakeuser2[pid.value].toString() == cid.value){
-        setCookie('userid', cid.value+pid.value, 1);
+        setCookie('userid', cid.value+"."+pid.value, 1);
+        document.location = document.location;
+    } else {
+
     }
 }
-function consoleLog(ccid, ccids){
-    if (getCookie("localtesting") == "true"){
-        var users = getCookie("accounts"); //Usernames
-        var cids = getCookie("accountCIDs"); //Citizen IDs
-        
-        if (cids[ccid] != null){
-            alert("username: " + users[ccid]);
-            setCookie("userid", ccid.value+"."+ccids.value, 10)
-            return ccid.value+"."+ccids.value;
-        } else {
-            return false;
-        }
-    }
+function logout(){
+    setCookie("userid", "invalid", -1)
+    document.location = document.location;
+}
+function consoleLog(pid, cid){
+    var fakeuser = {"AAAA": "Test"}; //Usernames
+    var fakeuser2 = {'AAAA': 1}; //CIDs
+    var fakeuser3 = {'AAAA': ['1']} //Orders
+    if (fakeuser2[pid].toString() == cid){
+        setCookie('userid', cid+"."+pid, 1);
+        return true;
+    } else {
+        return false;
+    }  
 }
 function checkLogin(){
     if(getCookie("userid") == ""){

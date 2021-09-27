@@ -9,9 +9,14 @@ function open(){
     span = document.getElementsByClassName("close")[0];
     spanl = document.getElementById("close");
     spand = document.getElementById("dclose");
+    uclose = document.getElementById("uclose");
     pmodal = document.getElementById("purchasemodal");
     lmodal = document.getElementById("loginmodal");
     dmodal = document.getElementById("debugmodal");
+    umodal = document.getElementById("usermodal");
+}
+function umodelOpen(){
+    umodal.style.display = "block"
 }
 function pmodelOpen(){
     pmodal.style.display = "block";
@@ -21,6 +26,9 @@ function lmodelOpen(){
 }
 function dmodelopen(){
     dmodal.style.display = "block";
+}
+uclose.onclick = function(){
+    umodal.style.display = "none";
 }
 span.onclick = function() {
     pmodal.style.display = "none";
