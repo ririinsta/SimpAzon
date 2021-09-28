@@ -33,6 +33,6 @@ function checkLogin(){
     if(getCookie("userid") == ""){
         lmodelOpen();
     } else {
-
+        umodelOpen();
     }
 }

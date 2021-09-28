@@ -15,7 +15,7 @@
             <div class="header-right">
                 <div class="header-right">
                     <a class="headeritem" class="" href="index.html"><center><span class="material-icons">&#xE88A;</span></center></a>
-                    <a class="headeritem" id="orders" onclick="umodelOpen();" href="javascript:void(0);"><center><span class="material-icons">&#xE158;</span></center></a>
+                    <a class="headeritem" id="orders" onclick="" href="javascript:void(0);"><center><span class="material-icons">&#xE158;</span></center></a>
                     <a class="headeritem" id="account" onclick="checkLogin();" href="javascript:void(0);"><center><span class="material-icons">&#xE87C;</span></center></a>
                     <a class="headeritem" id="debug" onclick="//dmodelopen();" href="javascript:void(0);"><center><span class="material-icons">&#xEF3D;</span></center></a>
                 </div>
@@ -121,6 +121,14 @@
                 <p id="username">Username: </p>
                 <p id="balance">Balance: </p>
                 <p id="orderamount">Orders: </p>
+            </div>
+        </div> 
+        <div id="ordermodal" class="ordermodal" onload="//setUserDetails();" style="display: none;">
+            <div class="modal-content" style="width: 200px;">
+                <span id="oclose" class="material-icons" style="float: right;">&#xE5CD;</span>
+                <table id="ordertable">
+
+                </table>
             </div>
         </div>   
         <script src="js/login.js"></script>

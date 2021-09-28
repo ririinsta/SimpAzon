@@ -13,3 +13,16 @@ function setUserDetails(){
     document.getElementById("balance").textContent = "Balance: 1000";
     document.getElementById("orderamount").textContent = "Orders: " + fakeuser3[getCookie("userid").split(".")[1]][0];
 }
+function setOrders(){
+    itemns = ["Wood (Long Distance Only)", "", "", "", "", ""];
+    var orders = fakeuser3;
+    var table = document.getElementById("ordertable");
+    var amount = 0;
+    orders.forEach(orderid => {
+        var row = table.insertRow[amount];
+        var orderid = row.insertCell(0);
+        var itemname = row.insertCell(1);
+        orderid.textContent = amount + 1;
+        itemname.textContent;
+    });
+}
