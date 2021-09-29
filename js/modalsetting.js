@@ -23,6 +23,6 @@ function setOrders(){
         var orderid = row.insertCell(0);
         var itemname = row.insertCell(1);
         orderid.textContent = amount + 1;
-        itemname.textContent;
+        itemname.textContent = itemns[amount];
     });
 }
