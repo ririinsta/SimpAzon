@@ -33,7 +33,7 @@ function dmodelopen(){
     dmodal.style.display = "block";
 }
 oclose.onclick = function(){
-    omodla.display.style = "none";
+    omodal.style.display = "none";
 }
 uclose.onclick = function(){
     umodal.style.display = "none";

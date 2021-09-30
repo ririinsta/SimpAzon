@@ -1,6 +1,6 @@
 var items = [document.getElementById("imq1"), document.getElementById("imq2"), document.getElementById("imq3"), document.getElementById("imq4"), document.getElementById("imq5"), document.getElementById("imq6")]
 
-document.onload = onOpen();
+//document.onload = onOpen();
 
 function setGithubLayout(){
     setCookie("hardcoded", "ririinsta.github.io/product.html", 1);
