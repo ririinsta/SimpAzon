@@ -1,5 +1,4 @@
 function purchase(){
-    //update force
     var currentPageID = getUrlVars()["pid"] - 1;
     var itemis = ["img/1.png", "", "", "", "", ""];
     var itemqs = [10, , 0, 0, 0, 0];
@@ -20,5 +19,5 @@ function purchase(){
 }
 function sendOrder(){
     var order = purchase();
-
+    
 }
