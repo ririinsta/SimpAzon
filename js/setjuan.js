@@ -7,7 +7,7 @@ var itemqs;
 var itemns;
 var itemps;
 
-window.onload = function () {
+function setProductList(){
     items = [document.getElementById("imq1"), document.getElementById("imq2"), document.getElementById("imq3"), document.getElementById("imq4"), document.getElementById("imq5"), document.getElementById("imq6")];
     itemsi = [document.getElementById("imi1"), document.getElementById("imi2"), document.getElementById("imi3"), document.getElementById("imi4"), document.getElementById("imi5"), document.getElementById("imi6")];
     itemsp = [document.getElementById("imp1"), document.getElementById("imp2"), document.getElementById("imp3"), document.getElementById("imp4"), document.getElementById("imp5"), document.getElementById("imp6")]
@@ -16,11 +16,6 @@ window.onload = function () {
     itemqs = [10, , 0, 0, 0, 0];
     itemns = ["Wood (Long Distance Only)", "", "", "", "", ""];
     itemps = [3, , 0, 0, 0, 0];
-    load();
-};
-
-
-function load(){
     var index = 0;
     items.forEach(element => {
         if (itemqs[index] == 0){

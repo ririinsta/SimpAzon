@@ -1,8 +1,11 @@
 window.onload = setAll();
 function setAll(){
     onOpen();
+    if (getCookie("hardcoded") == undefined){
+        alert("Set Hardcoded!");
+    }
     if (window.location != getCookie("hardcoded")){
-
+        setProductList();
     } else {
         setProduct();
     }
