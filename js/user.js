@@ -1,21 +1,25 @@
-var fakeuser = {"AAAA": "Test"}; //Usernames
-var fakeuser2 = {'AAAA': 1};     //CIDs
-var fakeuser3 = {'AAAA': ['1']}; //Orders
-var fakeuser4 = {'AAAA': 3};     //Home ID
+var usernames = {"AAAA": "Test"}; //Usernames
+var cid = {'AAAA': 1};     //CIDs
+var orders = {'AAAA': ['1']}; //Orders
+var homeid = {'AAAA': "3 Government Way, Saint Petersburg, Main Distric 001"};     //Home ID
 var userPID = getCookie("userid").split(".")[1];
 
 function getUserOrders(){
-    return fakeuser3[userPID];
+    var returnvalue = {"userid": cid[userPID], "orders": orders[userPID], "error": undefined};
+    return returnvalue;
 }
 function getUserCID(){
-    return fakeuser2[userPID];
+    var returnvalue = {"userid": cid[userPID], "error": undefined}
+    return returnvalue;
 }
 function getUserName(){
-    return fakeuser[userPID];
+    var returnvalue = {"userid": cid[userPID], "username": usernames[userPID], "error": undefined};
+    return returnvalue;
 }
 function getUserHomeID(){
-    return fakeuser4[userPID];
+    var returnvalue = {"userid": cid[userPID], "homeid": homeid[userPID], "error": undefined};
+    return returnvalue;
 }
 function setUserOrders(newOrderList){
-    fakeuser3 = newOrderList;
+    orders[userPID] = newOrderList;
 }
