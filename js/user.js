@@ -16,7 +16,6 @@ function getUserName(){
 function getUserHomeID(){
     return fakeuser4[userPID];
 }
-
 function setUserOrders(newOrderList){
     fakeuser3 = newOrderList;
 }
