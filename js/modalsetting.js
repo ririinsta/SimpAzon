@@ -1,17 +1,3 @@
-window.onload = setAll();
-function setAll(){
-    onOpen();
-    if (getCookie("hardcoded") == undefined){
-        alert("Set Hardcoded!");
-    }
-    if (window.location != getCookie("hardcoded")){
-        setProductList();
-    } else {
-        setProduct();
-    }
-    setUserDetails();
-    setOrders();
-}
 function setUserDetails(){
     console.log(getCookie("userid").split(".")[0] + " " + getCookie("userid").split(".")[1])
     var username = fakeuser[getCookie("userid").split(".")[1]];
@@ -19,7 +5,7 @@ function setUserDetails(){
     //document.getElementById("username").style.display = "block";
     document.getElementById("username").textContent = "Username: " + username;
     document.getElementById("balance").textContent = "Balance: 1000";
-    document.getElementById("orderamount").textContent = "Orders: " + fakeuser3[getCookie("userid").split(".")[1]][0];
+    document.getElementById("orderamount").textContent = "Orders: " + getUserOrders[0];
 }
 function setOrders(){
     itemns = ["Wood (Long Distance Only)", "", "", "", "", ""];

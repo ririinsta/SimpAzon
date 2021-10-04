@@ -38,9 +38,6 @@ oclose.onclick = function(){
 uclose.onclick = function(){
     umodal.style.display = "none";
 }
-span.onclick = function() {
-    pmodal.style.display = "none";
-}
 spanl.onclick = function() {
     lmodal.style.display = "none";
 }
