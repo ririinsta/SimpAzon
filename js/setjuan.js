@@ -48,12 +48,12 @@ function setProductList(){
         if (itemns[index] == ""){
             //alert(index++);
             //document.getElementById(index++).style = "display: none;"
-            console.log(itemsn[index].textContent);
+            //console.log(itemsn[index].textContent);
             element.style = "display: none;";
             element.parentElement.parentElement.style= "display: none;"
         } else {
             element.textContent = itemns[index];
-            console.log(element.textContent);
+            //console.log(element.textContent);
         }
         //console.log(itemns[index])
         index++;

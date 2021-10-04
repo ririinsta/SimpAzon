@@ -1,5 +1,5 @@
 function setUserDetails(){
-    console.log(getCookie("userid").split(".")[0] + " " + getCookie("userid").split(".")[1])
+    //console.log(getCookie("userid").split(".")[0] + " " + getCookie("userid").split(".")[1])
     var username = fakeuser[getCookie("userid").split(".")[1]];
     //document.getElementById("orders").style.display = "none";
     //document.getElementById("username").style.display = "block";
