@@ -7,7 +7,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300&family=Poppins:wght@500&family=Roboto:wght@300;500&family=Urbanist&family=Rubik&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="css/modal.css" rel="stylesheet">
-        <script src="js/purchase.js"></script>
+        <script src="js/both/TOP SITE.js"></script>
+        <script src="js/product/purchase.js"></script>
         <title id="title">SimpAzon | Item Name</title>
     </head>
     <body>
@@ -15,9 +16,8 @@
             <a href="index.html" class="logo">SimpAzon</a>
             <div class="header-right">
                 <a class="headeritem" class="" href="index.html"><center><span class="material-icons">&#xE88A;</span></center></a>
-                <a class="headeritem" id="orders" href="#"><center><span class="material-icons">&#xE158;</span></center></a>
+                <a class="headeritem" id="orders" onclick="omodalOpen();" href="javascript:void(0);"><center><span class="material-icons">&#xE158;</span></center></a>
                 <a class="headeritem" id="account" onclick="checkLogin();" href="javascript:void(0);"><center><span class="material-icons">&#xE87C;</span></center></a>
-                <a class="headeritem" id="debug" onclick="dmodelopen();" href="javascript:void(0);"><center><span class="material-icons">&#xEF3D;</span></center></a>
             </div>
         </div>
         <div class="info">
@@ -55,22 +55,28 @@
                 </form>
             </div>
         </div>
-        <div id="debugmodal" class="debugmodal">
-            <div class="modal-content" style="width: 30%;">
-                <span id="dclose" class="material-icons" style="float: right;">&#xE5CD;</span>
-                <input type="number" id="amount">
-                <button onclick="setQuantity();">Set Current Item Quantity</button>
-                <br>
-                <input type="text" name="accounts" id="account-id">
-                <button onclick="loadaccounts();">Set account cookie</button>
-                <br>
-                <button onclick="setGithubLayout();">Set Github Layout</button>
+        <div id="usermodal" class="usermodal" onload="//setUserDetails();" style="display: none;">
+            <div class="modal-content" style="width: 200px;">
+                <span id="uclose" class="material-icons" style="float: right;">&#xE5CD;</span>
+                <p id="username">Username: </p>
+                <p id="balance">Balance: </p>
+                <p id="orderamount">Orders: </p>
             </div>
         </div>
     </body>
-    <script src="js/product.js"></script>
-    <script src="js/setProductInfo.js"></script>
-    <script src="js/modal.js"></script>
-    <script src="js/login.js"></script>
-    <script src="js/purchase.js"></script>
+    <div id="ordermodal" class="ordermodal" onload="//setUserDetails();" style="display: none;">
+        <div class="modal-content" style="width: 200px;">
+            <span id="oclose" class="material-icons" style="float: right;">&#xE5CD;</span>
+            <table id="ordertable">
+
+            </table>
+        </div>
+    </div> 
+    <script src="js/index/product.js"></script>
+    <script src="js/both/modal.js"></script>
+    <script src="js/both/login.js"></script>
+    <script src="js/product/purchase.js"></script>
+    <script src="js/both/user.js"></script>
+    <script src="js/product/setProductInfo.js"></script>
+    <script src="js/both/BOTTOM SITE.js"></script>
 </html>
