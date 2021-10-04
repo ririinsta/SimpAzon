@@ -4,22 +4,55 @@ var orders = {'AAAA': ['1']}; //Orders
 var homeid = {'AAAA': "3 Government Way, Saint Petersburg, Main Distric 001"};     //Home ID
 var userPID = getCookie("userid").split(".")[1];
 
+var error0x001 = {"errorid": "0x001", "description": "User is not logged in."};
+
+function loggedIn(){
+    if (userPID == undefined){
+        return false;
+    } else {
+        return true;
+    }
+}
+
 function getUserOrders(){
-    var returnvalue = {"userid": cid[userPID], "orders": orders[userPID], "error": undefined};
-    return returnvalue;
+    if (loggedIn){
+        var returnvalue = {"userid": cid[userPID], "orders": orders[userPID], "error": undefined};
+        return returnvalue;
+    } else {
+        return {"userid": undefined, "orders": undefined, "error": error0x001};
+    }
+    
 }
 function getUserCID(){
-    var returnvalue = {"userid": cid[userPID], "error": undefined}
-    return returnvalue;
+    if (loggedIn){
+        var returnvalue = {"userid": cid[userPID], "error": undefined};
+        return returnvalue;
+    } else {
+        return {"userid": undefined, "error": error0x001};
+    }
 }
 function getUserName(){
-    var returnvalue = {"userid": cid[userPID], "username": usernames[userPID], "error": undefined};
-    return returnvalue;
+    if (loggedIn){
+        var returnvalue = {"userid": cid[userPID], "username": usernames[userPID], "error": undefined};
+        return returnvalue;
+    } else {
+        return {"userid": undefined, "username": undefined, "error": error0x001};
+    }
+    
 }
 function getUserHomeID(){
-    var returnvalue = {"userid": cid[userPID], "homeid": homeid[userPID], "error": undefined};
-    return returnvalue;
+    if (loggedIn){
+        var returnvalue = {"userid": cid[userPID], "homeid": homeid[userPID], "error": undefined};
+        return returnvalue;
+    } else {
+        return {"userid": undefined, "homeid": undefined, "error": error0x001};
+    }
 }
 function setUserOrders(newOrderList){
-    orders[userPID] = newOrderList;
+    if (loggedIn){
+        orders[userPID] = newOrderList;
+        return true;
+    } else {
+        return {"error": error0x001};
+    }
 }
