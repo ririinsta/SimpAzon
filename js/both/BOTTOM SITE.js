@@ -14,7 +14,7 @@ function setAll(){
     setOrders();
 }
 function onOpen(){
-    var username = fakeuser[getCookie("userid").split(".")[1]];
+    var username = getUserName()["username"];
     if(getCookie("userid") == ""){
         document.getElementById("orders").style.display = "none";
         document.getElementById("username").style.display = "block";
@@ -31,7 +31,7 @@ function onOpen(){
 }
 function setUserDetails(){
     //console.log(getCookie("userid").split(".")[0] + " " + getCookie("userid").split(".")[1])
-    var username = fakeuser[getCookie("userid").split(".")[1]];
+    var username = getUserName()["username"];
     //document.getElementById("orders").style.display = "none";
     //document.getElementById("username").style.display = "block";
     document.getElementById("username").textContent = "Username: " + username;
@@ -40,7 +40,7 @@ function setUserDetails(){
 }
 function setUserDetails(){
     //console.log(getCookie("userid").split(".")[0] + " " + getCookie("userid").split(".")[1])
-    var username = fakeuser[getCookie("userid").split(".")[1]];
+    var username = getUserName()["username"];
     //document.getElementById("orders").style.display = "none";
     //document.getElementById("username").style.display = "block";
     document.getElementById("username").textContent = "Username: " + username;
@@ -49,14 +49,18 @@ function setUserDetails(){
 }
 function setOrders(){
     itemns = ["Wood (Long Distance Only)", "", "", "", "", ""];
-    var orders = fakeuser3;
-    var table = document.getElementById("ordertable");
-    var amount = 0;
-    orders["AAAA"].forEach(orderid => {
-        var row = table.insertRow(amount);
-        var orderid = row.insertCell(0);
-        var itemname = row.insertCell(1);
-        orderid.textContent = amount + 1;
-        itemname.textContent = itemns[amount];
-    });
+    var orders = getUserOrders()["orders"];
+    if (orders != undefined){
+        var table = document.getElementById("ordertable");
+        var amount = 0;
+        orders.forEach(orderid => {
+            var row = table.insertRow(amount);
+            var orderid = row.insertCell(0);
+            var itemname = row.insertCell(1);
+            orderid.textContent = amount + 1;
+            itemname.textContent = itemns[amount];
+        });
+    } else {
+        
+    }
 }

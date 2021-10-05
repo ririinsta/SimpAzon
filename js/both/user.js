@@ -56,3 +56,8 @@ function setUserOrders(newOrderList){
         return {"error": error0x001};
     }
 }
+
+function signIn(){
+    var cid = document.getElementById("usernumber").textContent;
+    var pid = document.getElementById("citizenid").textContent;
+}
