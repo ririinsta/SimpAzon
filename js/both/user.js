@@ -56,8 +56,20 @@ function setUserOrders(newOrderList){
         return {"error": error0x001};
     }
 }
-
+function loginButton(){
+    if (loggedIn()){
+        umodelOpen();
+    } else {
+        lmodelOpen();
+    }
+}
+function findUser(PlayerCid){
+    if (cid[PlayerCid] != undefined){
+        return {"userid": cid[PlayerCid], "username": usernames[PlayerCid], "orders": orders[PlayerCid], "homeid": homeid[PlayerCid]};
+    }
+}
 function signIn(){
-    var cid = document.getElementById("usernumber").textContent;
-    var pid = document.getElementById("citizenid").textContent;
+    var PlayerCid = document.getElementById("citizenid").textContent;
+    var PlayerPid = document.getElementById("usernumber").textContent;
+    
 }

@@ -61,6 +61,6 @@ function setOrders(){
             itemname.textContent = itemns[amount];
         });
     } else {
-        
+
     }
 }
