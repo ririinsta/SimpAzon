@@ -7,3 +7,9 @@ body{
 .header a.logo {
     color: white;
 }
+.header a.headeritem{
+    color: white;
+}
+.header a:hover{
+    background-color: black;
+}

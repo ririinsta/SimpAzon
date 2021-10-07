@@ -5,10 +5,16 @@ function setAll(){
         alert("Set Hardcoded!");
     }
     var location = window.location + "";
-    if (location.includes(getCookie("hardcoded")) == false){
-        setProductList();
+    if (getCookie("hardcoded") == ""){
+        if (confirm("Set Hardcoded!")){
+            window.location = "file://C:/Users/26lungr/github/SimpAzon-2/404.html";
+        }
     } else {
-        setProduct();
+        if (location.includes(getCookie("hardcoded")) == false){
+            setProductList();
+        } else {
+            setProduct();
+        }
     }
     setUserDetails();
     setOrders();
