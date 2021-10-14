@@ -22,7 +22,7 @@
         </div>
         <div class="info">
             <img class="productpicture" id="productpicture" src="img/1.png">
-            <h2><span class="productname" id="productname">Test Item</span><span id="productindacator" class="material-icons">&#xE1D1;</span></h2> 
+            <h2><span class="productname" id="productname">Test Item</span><span id="productindacator" class="material-icons tooltip">&#xE1D1;</span></h2> 
             <p class="description" id="discription">This is a Test Item</p>
         </div>
         <div class="buy">

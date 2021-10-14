@@ -4,7 +4,6 @@
         <title>SimpAzon</title>
         <link href="css/main.css" rel="stylesheet">
         <link rel="stylesheet" href="css/modal.css">
-        <link rel="stylesheet" href="css/darkmode.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&family=Urbanist&display=swap" rel="stylesheet">
@@ -24,7 +23,7 @@
             </div>
         </div>
         <div class="items">
-            <div class="item" id="1" onclick="openproduct(1);">
+            <div class="item" id="1" onclick="openproduct(1)">
                 <center>
                     <img id="imi1" class="product" src="img/1.png">
                 </center>

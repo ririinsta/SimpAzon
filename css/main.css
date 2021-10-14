@@ -92,3 +92,18 @@ p.quantity{
 .material-icons.md-48 { font-size: 48px; }
 .material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
 .material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+body{
+    background-color: #2a2a2efa;
+}
+.header{
+    background-color: #2A2A2E;
+}
+.header a.logo {
+    color: white;
+}
+.header a.headeritem{
+    color: white;
+}
+.header a:hover{
+    background-color: black;
+}
