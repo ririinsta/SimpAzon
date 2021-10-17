@@ -104,7 +104,7 @@
                     <br>
                     <input type="password" id="cid" name="userid" id="usernumber" placeholder="Player ID">
                     <br>
-                    <button type="submit">Login</button>
+                    <input type="submit" id="submit" value="Login">
                 </form>
             </div>
         </div>

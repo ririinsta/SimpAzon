@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
 use Firebase\JWT\JWT;
-require_once('./vendor/autoload.php');
-include "./inc/inc_mysqli.php";
+require_once('../vendor/autoload.php');
+include "inc_mysqli.php";
 $conn = connectMySQLi();
 $cid = $_POST['cid'];
 $pid = $_POST['pid'];
