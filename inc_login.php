@@ -14,21 +14,19 @@ $valid = false;
 if ($result->num_rows > 0) {
     if (isset($cid)){
         if (isset($pid)){
-            if (isset($sub)){
-                $valid = true;
-            }
+            $valid = true;
         }
     }
 } else {
-    Header("Location: localhost\\SimpAzon-PHP\\");
+    Header("Location: ");
 }
 if ($valid){
     $secretKey  = 'bGS6lzFqvvSQ8ALbOxatm7/Vk7mLQyzqaS34Q4oR1ew=';
     $issuedAt   = new DateTimeImmutable();
     $expire     = $issuedAt->modify('+6 days')->getTimestamp();
-    $serverName = "127.0.0.1";
+    $serverName = "simpazon.udos";
     $username   = $result2['username'] . "." . $result2['pid'] . "." . $result2['cid'] . "." . $result2['address'];
-    echo $username;
+    //echo $username;
     $data = [
         'iat'  => $issuedAt->getTimestamp(),         // Issued at: time when the token was generated
         'iss'  => $serverName,                       // Issuer
@@ -36,9 +34,12 @@ if ($valid){
         'exp'  => $expire,                           // Expire
         'userName' => $username,                     // User name
     ];
-    echo JWT::encode(
+    $token = JWT::encode(
         $data,
         $secretKey,
         'HS512'
     );
+    echo $token;
+    $dtoken = JWT::decode($token, $secretKey, ['HS512']);
+    echo $dtoken->username . PHP_EOL;
 }

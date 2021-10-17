@@ -100,11 +100,11 @@
             <div class="modal-content" style="width: 200px;">
                 <span id="close" class="material-icons" style="float: right;">&#xE5CD;</span>
                 <form action="inc_login.php" method="post">
-                    <input type="number" id="pid" name="usercid" id="citizenid" placeholder="Citizen ID">
+                    <input type="number" id="pid" name="pid" placeholder="Citizen ID">
                     <br>
-                    <input type="password" id="cid" name="userid" id="usernumber" placeholder="Player ID">
+                    <input type="password" id="cid" name="cid" placeholder="Player ID">
                     <br>
-                    <input type="submit" id="submit" value="Login">
+                    <input type="submit" id="submit" name="submit" value="Login">
                 </form>
             </div>
         </div>
