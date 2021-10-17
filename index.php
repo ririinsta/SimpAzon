@@ -99,7 +99,7 @@
         <div id="loginmodal" class="loginmodal">
             <div class="modal-content" style="width: 200px;">
                 <span id="close" class="material-icons" style="float: right;">&#xE5CD;</span>
-                <form action="/SimpAzon-PHP/inc/inc_login.php" method="post">
+                <form action="inc_login.php" method="post">
                     <input type="number" id="pid" name="usercid" id="citizenid" placeholder="Citizen ID">
                     <br>
                     <input type="password" id="cid" name="userid" id="usernumber" placeholder="Player ID">
