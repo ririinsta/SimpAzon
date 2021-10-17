@@ -6,8 +6,11 @@ function setAll(){
     }
     var location = window.location + "";
     if (getCookie("hardcoded") == ""){
-        if (confirm("Set Hardcoded!")){
-            window.location = "file://C:/Users/26lungr/github/SimpAzon-2/404.html";
+        if (document.location.pathname.includes("index.php")){
+            alert("Unable to change hardcoded.");
+        } else {
+            setCookie("hardcoded", document.location.origin + document.location.pathname + "product.php");
+            document.location = document.location.origin + document.location.pathname;
         }
     } else {
         if (location.includes(getCookie("hardcoded")) == false){
